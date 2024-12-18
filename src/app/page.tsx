@@ -1,4 +1,4 @@
-type Tposts = {
+type Posts = {
   id: number;
   title: string;
 };
@@ -7,7 +7,7 @@ export default async function Home() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
     cache: "no-cache",
   });
-  const posts: Tposts[] = await res.json();
+  const posts: Posts[] = await res.json();
 
   return (
     <main>
